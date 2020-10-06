@@ -8,9 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#212121" />
     <title>Resto Ku</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylsheet" href="css/materialize.css" media="screen,projection">
     <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection">
     <link rel="icon" sizes="192x192" href="icon-192x192.png">    
     <link rel="manifest" href="/manifest.json">
@@ -34,23 +35,25 @@
 
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/nav.js"></script>
+    
+    
     <script>
-        // REGISTER SERVICE WORKER
-        if ("serviceWorker" in navigator) {
-          window.addEventListener("load", function() {
-            navigator.serviceWorker
-              .register("/service-worker.js")
-              .then(function() {
-                console.log("Pendaftaran ServiceWorker berhasil");
-              })
-              .catch(function() {
-                console.log("Pendaftaran ServiceWorker gagal");
-              });
-          });
-        } else {
-          console.log("ServiceWorker belum didukung browser ini.");
-        }
-      </script>
+      // REGISTER SERVICE WORKER
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then(function() {
+              console.log("Pendaftaran ServiceWorker berhasil");
+            })
+            .catch(function() {
+              console.log("Pendaftaran ServiceWorker gagal");
+            });
+        });
+      } else {
+        console.log("ServiceWorker belum didukung browser ini.");
+      }
+    </script>
 </body>
 
 </html>
